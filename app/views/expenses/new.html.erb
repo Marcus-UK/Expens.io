@@ -1,0 +1,25 @@
+<h1 align='center'>Add new expense</h1>
+<br>
+<div align='center'>
+<%= form_with scope: :expense, url: expenses_path, local: true do |form| %>
+  <p>
+    <%= form.label :Expense %><br>
+    <%= form.select :Expense, ['Travel', 'Lunch', 'Dinner', 'Accommodation']%>
+  </p>
+
+  <p>
+    <%= form.label :Amount %><br>
+    <%= form.number_field :amount %>
+  </p>
+
+
+  <p>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+</div>
