@@ -3,12 +3,12 @@
 <div align='center'>
 <%= form_with scope: :expense, url: expenses_path, local: true do |form| %>
   <p>
-    <%= form.label :Expense %><br>
-    <%= form.select :Expense, ['Travel', 'Lunch', 'Dinner', 'Accommodation']%>
+    <%= form.label :expense_type %><br>
+    <%= form.select :expense_type, ['Travel', 'Lunch', 'Dinner', 'Accommodation']%>
   </p>
 
   <p>
-    <%= form.label :Amount %><br>
+    <%= form.label :amount %><br>
     <%= form.number_field :amount %>
   </p>
 
