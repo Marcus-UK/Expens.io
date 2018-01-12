@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'web_helper'
 require 'simplecov'
 require 'simplecov-console'
 
