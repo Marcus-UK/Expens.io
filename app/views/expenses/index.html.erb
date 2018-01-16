@@ -16,6 +16,11 @@
       <td><%= link_to 'Show', expense_path(expense) %></td>
     </tr>
   <% end %>
+
+  <tr>
+    <tfoot>Total Amount: </tfoot>
+    <tfoot>£<%=@expenses_total%></tfoot>
+  </tr>
 </table>
 
 </div>
