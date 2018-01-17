@@ -14,3 +14,14 @@ def add_user
   click_button 'Sign up'
   click_link 'Sign Out'
 end
+
+def add_expense
+  visit 'expenses/new'
+  select 'Travel', from: 'expense[expense_type]'
+  fill_in 'expense[amount]', with: '100.00'
+  select '2018', from: 'expense_date_1i'
+  select 'January', from: 'expense_date_2i'
+  select '17', from: 'expense_date_3i'
+  fill_in 'expense[description]', with: 'Hello world!'
+  click_button 'Save Expense'
+end

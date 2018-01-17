@@ -1,7 +1,7 @@
 class ExpensesController < ApplicationController
 
   def index
-    @expenses = Expense.all
+    @expenses = Expense.order(date: :desc)
     @expenses_total = Expense.sum(:amount)
   end
 
@@ -22,6 +22,6 @@ class ExpensesController < ApplicationController
   private
 
   def expense_params
-    params.require(:expense).permit(:expense_type, :amount, :description)
+    params.require(:expense).permit(:expense_type, :amount, :date, :description)
   end
 end
