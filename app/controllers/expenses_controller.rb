@@ -1,8 +1,8 @@
 class ExpensesController < ApplicationController
 
   def index
-    @expenses = Expense.order(date: :desc)
-    @expenses_total = Expense.sum(:amount)
+    @expenses = current_user.expenses.order(date: :desc)
+    @expenses_total = current_user.expenses.sum(:amount)
   end
 
   def show
@@ -10,11 +10,11 @@ class ExpensesController < ApplicationController
   end
 
   def new
-    @expense = Expense.new
+    @expense = current_user.expenses.build
   end
 
   def create
-    @expense = Expense.new(expense_params)
+    @expense = current_user.expenses.build(expense_params)
 
     if  @expense.save
       redirect_to @expense
@@ -26,6 +26,6 @@ class ExpensesController < ApplicationController
   private
 
   def expense_params
-    params.require(:expense).permit(:expense_type, :amount, :date, :description)
+    params.require(:expense).permit(:expense_type, :amount, :date, :description, :user)
   end
 end
