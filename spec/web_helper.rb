@@ -16,7 +16,7 @@ def add_user
 end
 
 def add_expense
-  visit 'expenses/new'
+  click_link 'New Expense'
   select 'Travel', from: 'expense[expense_type]'
   fill_in 'expense[amount]', with: '100.00'
   select '2018', from: 'expense_date_1i'
