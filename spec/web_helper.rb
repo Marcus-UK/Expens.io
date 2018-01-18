@@ -23,7 +23,7 @@ def add_expense
   select 'January', from: 'expense_date_2i'
   select '17', from: 'expense_date_3i'
   fill_in 'expense[description]', with: 'Hello world!'
-  click_button 'Save Expense'
+  click_button 'Create Expense'
 end
 
 def click_sign_up_button

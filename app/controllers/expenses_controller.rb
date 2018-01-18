@@ -13,6 +13,10 @@ class ExpensesController < ApplicationController
     @expense = current_user.expenses.build
   end
 
+  def edit
+    @expense = Expense.find(params[:id])
+  end
+
   def create
     @expense = current_user.expenses.build(expense_params)
 
@@ -22,6 +26,17 @@ class ExpensesController < ApplicationController
       render 'new'
     end
   end
+
+  def update
+    @expense = Expense.find(params[:id])
+
+    if @expense.update(expense_params)
+      redirect_to @expense
+    else
+      render 'edit'
+    end
+  end
+
 
   private
 

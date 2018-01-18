@@ -13,7 +13,7 @@ feature 'add a new expense' do
     select 'January', from: 'expense_date_2i'
     select '17', from: 'expense_date_3i'
     fill_in 'expense[description]', with: 'Hello world!'
-    click_button 'Save Expense'
+    click_button 'Create Expense'
     expect(page).to have_content('Amount can\'t be blank')
   end
 
@@ -25,7 +25,7 @@ feature 'add a new expense' do
     select '2018', from: 'expense_date_1i'
     select 'January', from: 'expense_date_2i'
     select '17', from: 'expense_date_3i'
-    click_button 'Save Expense'
+    click_button 'Create Expense'
     expect(page).to have_content('Description can\'t be blank')
   end
 end

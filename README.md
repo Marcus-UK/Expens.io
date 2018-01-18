@@ -9,23 +9,27 @@ to meet specific requirements, the following user stories have been employed.
 # User stories
 
 ```
-As a user,
+As an employee,
 so that I can use Expens.io securely,
 I want to be able to sign up for a account.
 
-As a user,
+As an employee,
 so that I can keep my account secure,
 I want to be able to log in and out of Expens.io.
 
-As a user,
+As an employee,
 so that I can track my expenses,
 I want to be able to add a record of an expense.
 
-As a user,
+As an employee,
 so that I can accurately track my expenses,
 I want to be able to record the type, amount and date of the expense.
 
-As a user,
+As an employee,
+so that I can amend any mistakes with my expenses,
+I want to be able to edit any expense entered.
+
+As an employee,
 so that I can provide evidence of my expenses,
 I want to be able to upload photos of my receipts.
 ```

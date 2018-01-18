@@ -8,6 +8,7 @@
     <th>Description</th>
     <th>Date of expense</th>
     <th>Details</th>
+    <th>Edit expense</th>
   </tr>
 
   <% @expenses.each do |expense| %>
@@ -17,6 +18,7 @@
       <td><%= expense.description %></td>
       <td><%= expense.date %></td>
       <td><%= link_to 'Show', expense_path(expense) %></td>
+      <td><%= link_to 'Edit', edit_expense_path(expense) %></td>
     </tr>
   <% end %>
 
