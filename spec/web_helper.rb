@@ -25,3 +25,13 @@ def add_expense
   fill_in 'expense[description]', with: 'Hello world!'
   click_button 'Save Expense'
 end
+
+def click_sign_up_button
+  visit '/'
+  click_link 'Create an account'
+end
+
+def click_log_in_button
+  visit '/'
+  click_link 'Log in'
+end
