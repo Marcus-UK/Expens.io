@@ -23,6 +23,7 @@ def add_expense
   select 'January', from: 'expense_date_2i'
   select '17', from: 'expense_date_3i'
   fill_in 'expense[description]', with: 'Hello world!'
+  attach_file('expense[image]', 'app/assets/images/receipt_image.jpg')
   click_button 'Create Expense'
 end
 

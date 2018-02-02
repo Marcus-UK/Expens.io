@@ -40,7 +40,7 @@ class ExpensesController < ApplicationController
   def destroy
     @expense = Expense.find(params[:id])
     @expense.destroy
- 
+
     redirect_to expenses_path
   end
 
@@ -48,6 +48,6 @@ class ExpensesController < ApplicationController
   private
 
   def expense_params
-    params.require(:expense).permit(:expense_type, :amount, :date, :description, :user)
+    params.require(:expense).permit(:expense_type, :amount, :date, :description, :image, :user)
   end
 end

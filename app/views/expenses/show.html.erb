@@ -22,6 +22,11 @@
   <%= @expense.description %>
 </p>
 
+<p>
+  <strong>Evidence of expense:</strong>
+  <%= image_tag(@expense.image_url.to_s) %>
+</p>
+
 <%= link_to "Your expenses", expenses_path %>
 
 </div>
