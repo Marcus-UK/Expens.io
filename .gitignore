@@ -17,6 +17,9 @@
 !/log/.keep
 !/tmp/.keep
 
+# Ignore test uploader files
+/public/uploads/test/*
+
 /node_modules
 /yarn-error.log
 coverage/
