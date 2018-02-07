@@ -5,6 +5,17 @@ class ExpensesController < ApplicationController
     @expenses_total = current_user.expenses.sum(:amount)
   end
 
+  def admin_index
+    @expenses = Expense.all
+    @expenses_total = Expense.all.sum(:amount)
+
+    if current_user.admin == true
+      render 'admin_index'
+    else
+      render 'index'
+    end
+  end
+
   def show
     @expense = Expense.find(params[:id])
   end

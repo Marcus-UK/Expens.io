@@ -36,3 +36,7 @@ def click_log_in_button
   visit '/'
   click_link 'Log in'
 end
+
+def set_admin_user
+  User.where( email: 'marcus@testing.com').update_all( admin: true)
+end
