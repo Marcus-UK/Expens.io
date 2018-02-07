@@ -34,6 +34,23 @@ so that I can provide evidence of my expenses,
 I want to be able to upload photos of my receipts.
 ```
 
+The following user stories are being used to guide the development of an admin function:
+
+```
+As an admin,
+so that I have an overview of all expenses,
+I want to be able to see all expenses in a single view.
+
+As an admin,
+so that I can analyse expenses,
+I want to be able to filter expenses by type or date.
+
+As an admin,
+so that I can update employees,
+I want to be able to mark expenses as paid.
+
+```
+
 # Getting started
 
 To set up a localhost:
@@ -69,7 +86,6 @@ $ Run 'Rspec'
 
 At this current moment in time, the foundations are in place for this project. At the moment, a user can register and log in. After that, they will be able record different types of expense and view a summary of all expenses to date. All CRUD operations are in place for expenses as well. Going forwards, I plan to add a great deal more functionality. The main areas of work are as follows:
 
-- Fully integrate the Carrierwave gem to allow users to upload photos of receipts for their expenses.
 - Add admin user functionality. The ambition is for an admin to have an overview of all expenses on the system.
 - Add auditing to the database. As a financial app, there should be records of any changes made to expenses.
 - Improve reporting functions. I would like to make it possible to filter expenses by type and date etc.
