@@ -57,6 +57,14 @@ I want to be able to send them messages.
 
 # Getting started
 
+To access the hosted version of this application, visit [here](https://expensio-1.herokuapp.com/).
+On this site, you can sign up as a user and try everything out. If you'd like
+to see the admin functionality, use the following details to login:
+
+email: admin1@expens.io
+password: admin1
+
+
 To set up a localhost:
 
 ```
