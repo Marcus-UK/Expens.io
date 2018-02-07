@@ -49,6 +49,10 @@ As an admin,
 so that I can update employees,
 I want to be able to mark expenses as paid.
 
+As an admin,
+so that I can discuss expenses with employees,
+I want to be able to send them messages.
+
 ```
 
 # Getting started
@@ -87,5 +91,6 @@ $ Run 'Rspec'
 At this current moment in time, the foundations are in place for this project. At the moment, a user can register and log in. After that, they will be able record different types of expense and view a summary of all expenses to date. All CRUD operations are in place for expenses as well. Going forwards, I plan to add a great deal more functionality. The main areas of work are as follows:
 
 - Add admin user functionality. The ambition is for an admin to have an overview of all expenses on the system.
+- Add a messaging feature so that employees and admins can discuss specific expenses.
 - Add auditing to the database. As a financial app, there should be records of any changes made to expenses.
 - Improve reporting functions. I would like to make it possible to filter expenses by type and date etc.
