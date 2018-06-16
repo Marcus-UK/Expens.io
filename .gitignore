@@ -19,6 +19,7 @@
 
 # Ignore test uploader files
 /public/uploads/test/*
+/public/uploads
 
 /node_modules
 /yarn-error.log

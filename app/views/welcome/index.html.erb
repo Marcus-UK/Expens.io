@@ -1,14 +1,21 @@
 <div align='center'>
-<%= image_tag('expensio.jpg') %><br>
+  <div id='home-content'>
+  <h1>Expens.io</h1>
 
-<h3>Helping you to keep track of your work expenses</h3><br>
+  <h3>Helping you to keep track of your work expenses</h3><br>
+  </div>
+  
 
-<p>Expens.io is here to help you keep on top of your expenses. Sign up today and
-  see what we can do for you.</p><br>
+  <p>Expens.io is here to help you keep on top of your expenses. Sign up today and
+     see what we can do for you.</p><br>
 
   <div>
-    <a id='site-buttons' href="/users/sign_up" class="btn btn-primary">Create an account</a>
-    <a id='site-buttons' href="/users/sign_in" class="btn btn-primary">Log in</a>
+    <% if !user_signed_in? %>
+      <a id='site-buttons' href="/users/sign_up" class="btn btn-primary">Create an account</a>
+      <a id='site-buttons' href="/users/sign_in" class="btn btn-primary">Log in</a>
+    <% else %>
+      <a id='site-buttons' href="/expenses" class="btn btn-primary">Your expenses</a>
+    <% end %>
   </div>
 
 </div>
