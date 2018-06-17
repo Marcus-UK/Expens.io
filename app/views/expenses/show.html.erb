@@ -2,30 +2,26 @@
 
 <h1>Expense Summary</h1>
 
-<p>
-  <strong>Expense type:</strong>
-  <%= @expense.expense_type %>
-</p>
 
-<p>
-  <strong>Amount(£):</strong>
-  <%= @expense.amount %>
-</p>
+  <p><strong>Expense type:</strong></p>
+  <p><%= @expense.expense_type %></p>
 
-<p>
-  <strong>Date of expense:</strong>
-  <%= @expense.date %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @expense.description %>
-</p>
+  <p><strong>Amount(£):</strong></p>
+  <p><%= @expense.amount %></p>
 
-<p>
-  <strong>Evidence of expense:</strong>
-  <%= image_tag(@expense.image_url.to_s) %>
-</p>
+  <p><strong>Date of expense:</strong></p>
+  <p><%= @expense.date %></p>
+
+  <p><strong>Description:</strong></p>
+  <p><%= @expense.description %></p>
+
+  <p><strong>Evidence of expense:</strong></p>
+    <% if @expense.image.present? %>
+      <p><%= image_tag(@expense.image_url.to_s) %></p>
+    <% else %>
+      <p>No evidence submitted. </p>
+    <% end %>
 
 <%= link_to "Your expenses", expenses_path %>
 
