@@ -1,0 +1,9 @@
+#site-buttons {
+  background-color: #6cc5cc;
+  border: none;
+  transition-duration: 0.2s
+}
+
+#site-buttons:hover {
+  background-color: #519399;
+}

@@ -1,0 +1,12 @@
+#site-navbar {
+  background-color: #6cc5cc;
+}
+
+#site-navbar a {
+  color: white;
+  transition-duration: 0.2s;
+}
+
+#site-navbar a:hover {
+  background-color: #519399;
+}

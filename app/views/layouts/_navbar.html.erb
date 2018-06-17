@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default" role="navigation" id='site-navbar'>
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -16,14 +16,14 @@
         <% if user_signed_in? %>
           <li><%= link_to "Your Expenses", expenses_path, class: "active" %></li>
           <li><%= link_to "New Expense", new_expense_path, class: "active" %></li>
+          <% if current_user.admin == true %>
+            <li><%= link_to "Expenses Overview", expenses_admin_index_path %>
+          <% end %>
           <li><%= link_to "Account", edit_user_registration_path %></li>
           <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
-            <% if current_user.admin == true %>
-              <li><%= link_to "Expenses Overview", expenses_admin_index_path %>
-            <% end %>
         <% else %>
           <li><%= link_to "Sign Up", new_user_registration_path, class: "active" %></li>
-          <li><%= link_to "Sign In", new_user_session_path, class: "active" %></li>
+          <li><%= link_to "Log In", new_user_session_path, class: "active" %></li>
         <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->

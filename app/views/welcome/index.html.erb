@@ -1,12 +1,23 @@
 <div align='center'>
-<h1>Expens.io</h1><br>
+  <div id='home-content'>
+    <div id='home-text'
+      <h1>Expens.io</h1>
 
-<h3>Helping you to keep track of your work expenses</h3><br>
+      <h3>Helping you to keep track of your work expenses</h3><br>
+    </div>
+  </div>
 
-<p>Expens.io is here to help you keep on top of your expenses. Sign up today and
-  see what we can do for you.</p><br>
 
-  <a href="/users/sign_up" class="btn btn-primary">Create an account</a>
-  <a href="/users/sign_in" class="btn btn-primary">Log in</a>
+  <p>Expens.io is here to help you keep on top of your expenses. Sign up today and
+     see what we can do for you.</p><br>
+
+  <div>
+    <% if !user_signed_in? %>
+      <a id='site-buttons' href="/users/sign_up" class="btn btn-primary">Create an account</a>
+      <a id='site-buttons' href="/users/sign_in" class="btn btn-primary">Log in</a>
+    <% else %>
+      <a id='site-buttons' href="/expenses" class="btn btn-primary">Your expenses</a>
+    <% end %>
+  </div>
 
 </div>
