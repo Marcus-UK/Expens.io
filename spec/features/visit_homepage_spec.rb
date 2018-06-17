@@ -12,10 +12,10 @@ feature 'home page' do
     expect(page).to have_content('Email')
   end
 
-  scenario 'A user who is already signed in clicks on the sign up button' do
+  scenario 'Create an account button is not visible for signed in user' do
     sign_up
-    click_sign_up_button
-    expect(page).to have_content('You are already signed in.')
+
+    expect(page).to_not have_content('Create an account')
   end
 
   scenario 'A user clicks on the log in button on the home page' do
@@ -23,9 +23,9 @@ feature 'home page' do
     expect(page).to have_content('Email')
   end
 
-  scenario ' A user who is already signed in clicks on the Log in button' do
+  scenario 'Log in button is not visible for a signed in user' do
     sign_up
-    click_log_in_button
-    expect(page).to have_content('You are already signed in.')
+
+    expect(page).to_not have_content('Log in')
   end
 end
