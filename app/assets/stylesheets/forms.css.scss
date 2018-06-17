@@ -1,8 +1,21 @@
 #devise-forms {
   text-align: center;
 
-  #text-field{
+  .inputs {
+    border: none;
+    border-radius: 10px;
+    width: 33%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    background-color: #6cc5cc;
+    padding: 20px;
+    color: white;
+  }
+
+  .text-field{
     margin-bottom: 8px;
     border-radius: 5px;
+    max-width: 80%;
+    color: black;
   }
 }

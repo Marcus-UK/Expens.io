@@ -14,6 +14,7 @@ SimpleCov.start 'rails' do
   add_filter '/app/jobs'
   add_filter '/app/mailers'
   add_filter '/app/models/application_record.rb'
+  add_filter '/app/models/user'
 end
 SimpleCov.formatter = SimpleCov::Formatter::Console
 RSpec.configure do |config|

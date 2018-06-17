@@ -1,7 +1,8 @@
 #site-buttons {
   background-color: #6cc5cc;
   border: none;
-  transition-duration: 0.2s
+  transition-duration: 0.2s;
+  margin-bottom: 10px;
 }
 
 #site-buttons:hover {
